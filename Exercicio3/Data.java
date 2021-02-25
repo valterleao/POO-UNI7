@@ -1,8 +1,14 @@
 class Data{
   
+<<<<<<< HEAD
+  private final int dia;
+  private final int mes;
+  private final int ano;
+=======
   int dia;
   int mes;
   int ano;
+>>>>>>> b7e60dd12d1cf14d5d8bfbf098e5f104f3c48759
 
   public Data(int dia, int mes, int ano) {
 		this.dia = dia;

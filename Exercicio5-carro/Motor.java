@@ -10,6 +10,9 @@ class Motor{
   
   public setCilindros(){
      
+
+
+     
   }
 
 }
