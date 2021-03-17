@@ -1,0 +1,9 @@
+
+public enum Funcao {
+  SECRETARIO,
+  TESOUREIRO,
+  PROFESSOR,
+  ANALISTA_SISTEMAS,
+  MOTORISTA,
+  ALUNO
+}
