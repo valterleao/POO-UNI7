@@ -1,10 +1,10 @@
-public class Professor extends Funcionario{
+public class Motorista extends Funcionario{
 
-  private String escolaridade;
+  private String categoriahabil;
 
-  public Professor(String nome, Funcao funcao, String dnasci, double salario, String escolaridade){
+  public Motorista(String nome, Funcao funcao, String dnasci, double salario, String categoriahabil){
     super(nome, funcao, dnasci, salario);
-    this.escolaridade = escolaridade;
+    this.categoriahabil = categoriahabil;
   }
    
   public int getMatricula(){
@@ -30,12 +30,12 @@ public class Professor extends Funcionario{
     return super.getDadmis();
   }
 
-  public String getEscolaridade(){
-    return escolaridade;
+  public String getCategoriahabil(){
+    return categoriahabil;
   }
 
-  public void setEscolaridade(String escolaridade){
-    this.escolaridade = escolaridade;
+  public void setCategoriahabil(String categoriahabil){
+    this.categoriahabil = categoriahabil;
   }
   
   public void Exibecad(){
@@ -45,7 +45,7 @@ public class Professor extends Funcionario{
     System.out.println("Data Nascimento : " + getDnasci());
     System.out.println("Funçao : " + getFuncao());
     System.out.println("Salario : " + getSalario());
-    System.out.println("Escolaridade : " + escolaridade);
+    System.out.println("Categoria de Habilitação : " + categoriahabil);
     System.out.println();
     }
 }
