@@ -44,4 +44,12 @@ public class Aluno{
     this.turma = turma;
   }
 
+  public void Listalunos(){
+    System.out.println("Codigo matricula : " + codmatricula);
+    System.out.println("Nome do aluno : " + nome);
+    System.out.println("Nº CPF : " + nocpf);
+    System.out.println("Nome da turma : " + turma);
+    System.out.println();
+  }
+
 }
