@@ -2,7 +2,11 @@
 
 class Duasdimensoes{
 
+<<<<<<< HEAD
   public static void main(String[] args){
+=======
+  public static void main(String args[]){
+>>>>>>> 4679e0dceacbe4ac989daf37c5d9913bdad97c89
     int i, t;
     int tabela[][] = new int[3][4];
 
