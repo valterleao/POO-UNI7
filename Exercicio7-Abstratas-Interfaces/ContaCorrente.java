@@ -8,6 +8,11 @@ public class ContaCorrente extends Produto {
 
   public String getTipo() {
     return "Conta Corrente";
+
+  }
+
+  public void imprimir() {
+    System.out.println( getTipo() + getConta() + "...");
   }
 
 }

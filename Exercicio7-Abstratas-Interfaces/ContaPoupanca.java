@@ -30,4 +30,8 @@ public class ContaPoupanca extends Produto {
     porcentagemSelic = selic;
   }
 
+  public void imprimir() {
+    System.out.println( getTipo() + getConta() + "...");
+  }
+
 }
