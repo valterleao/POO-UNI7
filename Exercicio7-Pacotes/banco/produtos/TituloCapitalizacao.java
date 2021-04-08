@@ -1,3 +1,5 @@
+package banco.produtos;
+
 public class TituloCapitalizacao extends Produto {
 
   public void calcularRendimento() {
@@ -14,11 +16,6 @@ public class TituloCapitalizacao extends Produto {
 
   public String getTipo() {
     return "Titulo Capitalizacao";
-
-  }
-
-  public void imprimir() {
-    System.out.println( getTipo() + getConta() + "...");
   }
 
 }

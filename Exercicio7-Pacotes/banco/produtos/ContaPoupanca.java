@@ -1,3 +1,5 @@
+package banco.produtos;
+
 public class ContaPoupanca extends Produto {
 
   private static double porcentagemSelic;
@@ -16,6 +18,9 @@ public class ContaPoupanca extends Produto {
     }
 
     setSaldo(saldoAtual + rendimento);
+
+
+    ContaCorrente.soma(1, 2);
   }
 
   public String getTipo() {
@@ -30,8 +35,18 @@ public class ContaPoupanca extends Produto {
     porcentagemSelic = selic;
   }
 
-  public void imprimir() {
-    System.out.println( getTipo() + getConta() + "...");
+  public String toString() {
+    return "Poupanca " + getConta() + " Saldo: " + getSaldo() + " Senha: " + senha;
+  }
+
+  public boolean equals(Object obj) {
+    if (obj instanceof ContaPoupanca) {
+      ContaPoupanca outraPoupanca = (ContaPoupanca) obj;
+      return this.getConta() == outraPoupanca.getConta();
+    }
+    else {
+      return false;
+    }
   }
 
 }

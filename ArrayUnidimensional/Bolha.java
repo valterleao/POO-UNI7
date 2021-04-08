@@ -1,7 +1,11 @@
 /* Demonstra a classificação por bolha */
 
 class Bolha{
+<<<<<<< HEAD
   public static void main(String[] args){
+=======
+  public static void main(String args[]){
+>>>>>>> 4679e0dceacbe4ac989daf37c5d9913bdad97c89
     int numeros[] = {99, -10, 100123, 18, -978, 5623, 463, -9, 287, 49};
     int a, b, t;
     int tamanho;
