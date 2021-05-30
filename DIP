@@ -1,0 +1,52 @@
+UNI7 - SISTEMAS DA INFORMAÇÃO 
+PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROF. ALEX FERREIRA RAMIRES 
+ALUNO: FRANCISCO ALVES LEÃO
+MATRICULA: 2019546
+- EXPLICAR O QUE É O PRINCIPÍO DA INVERSÃO DE DEPENDÊNCIA 
+
+PRINCIPIO DA INVERSÃO DE DEPÊNCIA (Dependency Inversion Principle) ou
+Simplesmente DIP, é a base para um bom design orientado a objetos e extremamente 
+Importante para o projeto de uma arquitetura de software flexível e focada no domínio.
+O princípio de inversão de dependência é muito comumente separado em dois conceitos principais que o definem.
+1 – Módulos de alto nível não devem depender dos módulos de baixo nível. Os dois devem ser baseados em abstrações.
+2 – Abstrações não devem ser baseadas em detalhes. Detalhes devem ser baseados em abstrações.
+Inverter a dependência faz com que um cliente não fique frágil a mudanças relacionadas a detalhes de implementação. Isto é, alterar o detalhe não quebra o cliente. Além disso, o mesmo cliente pode ser reutilizado com outro detalhe de implementação.
+EXEMPLO DE VILOLAÇÃO
+public class Botao {
+   private Lampada _lampada;
+   public void Acionar() {
+       if (condição) {
+          _lampada.Ligar();
+       }
+    }
+}
+
+O design acima viola O PRINCIPIO DA INVERSÃO DE DEPENDÊNCIA uma vez que a classe Botao depende de uma classe concreta Lampada. Ou seja, Botao conhece detalhes de implementação ao invés de termos identificado uma abstração para o design.
+
+Deve-se criar uma abstração para que Botao seja capaz de tratar alguma ação e ligar ou desligar algum dispositivo , seja ele qual for: uma lâmpada, um motor, um alarme, etc.
+
+INVERTENDO A DEPENDÊNCIA
+A solução abaixo inverte a dependência de botão para lâmpada, faze4ndo com que ambos agora dependam da abstração Dispositivo:
+public class Botao {
+   private Dispositivo _dispositivo;
+   public void Acionar() {
+       if (condição) {
+          _dispositivo.Ligar();
+        }
+   }
+   public interface Dispositivo { 
+       void Ligar();
+       void Desligar();
+    }
+    public class Lampada : Dispositivo {
+        public void Ligar() {
+            // ligar a lâmpada
+         }
+        public void Desligar() {
+            // ligar lâmpada
+        }
+     }
+
+O Principio da inversão de dependência é um dos pilares para a boa arquitetura de software, focada na resolução do problema e flexível quanto a detalhes de implementação , como banco de dados, serviços web, leitura e escrita de arquivos, etc.
+
