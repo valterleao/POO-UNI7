@@ -1,0 +1,52 @@
+UNI7 - SISTEMAS DA INFORMAÇÃO 
+PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROF. ALEX FERREIRA RAMIRES 
+ALUNO: FRANCISCO ALVES LEÃO
+MATRICULA: 2019546
+
+- EXPLICAR 2 CODE SMELLS QUE NÃO FORAM VISTOS NA AULA DO DIA 19.05.2021
+
+Data Clumps
+
+Quando diferentes partes do código contêm grupos idênticos de variáveis (como parâmetros para se conectar a um banco de dados). Esses aglomerados devem ser transformados em suas próprias classes. Isso muitas vezes acontece devido a má estrutura de  "programação  Control C - Control V.
+Quando uma classe faz o trabalho de duas, basta separa-las em duas ou mais classes.
+Vejas o exemplo.   
+class Soldier {
+  public int health;
+  public int damage;
+  public int weaponStatus;
+  public int getDamage() {
+   // ...
+  }
+  public void attack() {
+   // ...
+  }
+}
+
+Em vez disso, crie uma nova classe e coloque os campos e métodos responsáveis pela funcionalidade relevante nela.
+class Soldier {
+  public int health;
+  public Weapon weapon;
+  public void attack() {
+    // ...
+  }
+}
+
+class Weapon {
+  public int damage;
+  public int weaponStatus;
+  public int getDamage() {
+    // ...
+  }
+}
+
+Middle Man
+
+Esse Smells pode ser o resultado da eliminação excessivamente zelosa de cadeias de mensagens.
+Quando vemos no código com uma série de chamadas semelhantes $a->b()->c()->d()
+Uma cadeia de mensagens ocorre quando um cliente solicita outro objeto, esse objeto solicita mais um, e assim por diante. Essas cadeias significam que o cliente depende da navegação ao longo da estrutura da classe. Quaisquer alterações nesses relacionamentos requerem modificar o cliente.
+A solução é criar um novo método na classe A que delegue a chamada para o objeto B. Agora o cliente não sabe, ou depende da classe B.
+
+
+
+
