@@ -1,4 +1,5 @@
 package conta;
+<<<<<<< HEAD
 import excecoes.*;
 
 public class ContaCorrente extends ContaBanco {
@@ -27,6 +28,15 @@ public class ContaCorrente extends ContaBanco {
 
   public double getSaldo() {
     return this.saldo;
+=======
+
+public class ContaCorrente extends ContaBanco {
+
+  public void calcularRendConta() {
+    double saldoAtual = getSaldo();
+    double rendimento = saldoAtual * 0.03;
+    setSaldo(saldoAtual + rendimento);
+>>>>>>> 4ae79aefdf6794a6d3b8636885700d9ddd484a2a
   }
 
   public String getTipo() {
@@ -34,4 +44,11 @@ public class ContaCorrente extends ContaBanco {
 
   }
 
+<<<<<<< HEAD
+=======
+  public void imprimir() {
+    System.out.println( getTipo() + getConta() + "...");
+  }
+
+>>>>>>> 4ae79aefdf6794a6d3b8636885700d9ddd484a2a
 }
